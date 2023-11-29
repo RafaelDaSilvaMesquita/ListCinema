@@ -1,0 +1,101 @@
+body {
+    /*background-image: url('./images/cinemafont.jpg');
+    background-size: 200px 100px;*/
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: black;
+    color : white;
+    width: 1000px;
+    margin: auto;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    color: cornsilk;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+header {
+    margin-bottom: 20px; /* Ajoute une marge en bas du header */
+
+    /*background-image: url('./images/cinemafont.jpg');*/
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.main-content {
+    border: 2px solid #a4180b;
+    padding: 20px; 
+}
+
+.centrer-texte {
+    text-align: center; /* Alignement horizontal au centre */
+    display: flex;
+    justify-content: center; /* Alignement vertical au centre */
+    align-items: center;
+    height: 100vh; /* Pour centrer verticalement sur toute la hauteur de la fenêtre */
+    margin: 0; /* Pour enlever les marges par défaut */
+    color: black;
+}
+
+.bouton-tri {
+    display: block;
+    margin: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 1em;
+    text-decoration: none;
+    color: #ddd;
+}
+
+.bouton-tri:hover {
+    background-color: #ddd;
+    color: #333;
+}
+
+.container-bouton-tri {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-item-bouton {
+    flex: auto;
+}
+
+.label-front{
+    display: block;
+    margin: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 1em;
+    text-decoration: none;
+    color: #ddd;
+}
+
+#genre {
+    background-color: black;
+    color: white;
+    padding: 8px; /* Ajoutez un rembourrage pour réduire la taille */
+    border-radius: 8px; /* Rend les coins du menu déroulant arrondis */
+    width: 150px; /* Définissez une largeur fixe pour le menu déroulant */
+}
+
+
+
+/* #2c0706	rgb(44, 7, 6) noir 
+#a4180b	rgb(164, 24, 11) rouge cine
+#f3f2f2	rgb(243, 242, 242) blanc 
+#d97763	rgb(217, 119, 99) saumon 
+#9c9594	rgb(156, 149, 148) gris clair */

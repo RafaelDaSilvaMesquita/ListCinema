@@ -1,0 +1,61 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste Cine</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!--Contenue de la page ici-->
+    <header>
+        <img src="./images/cinemafont.jpg" width="700" height="600">
+        
+    </header>
+    <main>
+        <nav>
+            <ul class="container-bouton-tri">
+                <li class="flex-item-bouton" id="triTitres"><a class="bouton-tri" href="#triertitre">Trier par titre</a></li>
+                <li class="flex-item-bouton" id="triBoutonCroissant"><a class="bouton-tri" href="#triertitre">Trier par ordre croissant</a></li>
+                <li class="flex-item-bouton" id="triBoutonDecroissant"><a class="bouton-tri" href="#triertitre">Trier par ordre décroissant</a></li>
+                <label for="genre" class="label-front">Filtrer par genre :</label>
+                <select id="genre">
+                    <option value="Tous">Tous les genres</option>
+                    <option value="Aventure">Aventure</option>
+                    <option value="Action">Action</option>
+                    <option value="Drame">Drame</option>
+                    <option value="Western">Western</option>
+                    <option value="Science-Fiction">Science-Fiction</option>
+                    <option value="Comedy">Comedie</option>
+                    <option value="Mystère">Mystère</option>
+                    <!-- Ajoutez d'autres genres ici selon votre fichier JSON -->
+                </select>
+                <li class="flex-item-bouton"><a class="bouton-tri" href="#trierpays">Trier par pays</a></li>          
+            </ul>
+        </nav>
+        <section class="main-content">
+            <article>
+                <h2>Titre</h2>
+                <span>                   
+                    <p>Année</p>
+                </span>
+                <span>
+                    <p>Genre</p>
+                </span>
+                <span>
+                    <p>Résumé</p>
+                </span>
+                <span>
+                    <p>Pays</p>
+                </span>
+            </article>
+        </section>
+    </main>
+
+
+    <script src="script.js" type="module"></script>
+
+</body>
+
+</html>
