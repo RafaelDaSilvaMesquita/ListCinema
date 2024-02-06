@@ -92,6 +92,13 @@ header {
     width: 150px; /* Définissez une largeur fixe pour le menu déroulant */
 }
 
+.coeur-icon {
+    display: block; /* Assurez-vous que l'icône est sur une nouvelle ligne */
+    margin-top: 10px; /* Ajoutez une marge au-dessus de l'icône de cœur */
+    width: 24px; /* Ajustez la largeur selon vos besoins */
+    height: 24px; /* Ajustez la hauteur selon vos besoins */
+}
+
 
 
 /* #2c0706	rgb(44, 7, 6) noir 

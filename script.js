@@ -73,7 +73,7 @@ function afficherFilms(listFilms)
     //console.log(listFilms)
     for (const film of listFilms) 
     {
-       //console.log(film.title)
+       console.log(film.title)
        const titreFilm = document.createElement('h2');
        titreFilm.innerHTML = film.title;
        monElement.appendChild(titreFilm);
@@ -108,8 +108,53 @@ function afficherFilms(listFilms)
        const realisateur = document.createElement('p');
        realisateur.innerHTML = `Réalisateur : ${film.director.first_name} ${film.director.last_name} (${film.director.birth_date})`;
        monElement.appendChild(realisateur);
+       
+
+        // Ajoutez l'icône du cœur avec une balise <img>
+        const coeurIcon = document.createElement('img');
+        coeurIcon.src = 'images/heart-icon.jpg'; // Remplacez cela par le chemin de votre propre icône
+        coeurIcon.alt = 'Cœur'; // Ajoutez une description si nécessaire
+        coeurIcon.classList.add('coeur-icon');
+        coeurIcon.addEventListener('click', () => marquerFilmAime(film._id));
+
+        // Ajoutez l'icône du cœur à la section principale
+        monElement.appendChild(coeurIcon);
+
+    }
+
+    function marquerFilmAime(filmId) {
+        // Récupérez la liste des films aimés depuis le localStorage
+        let filmsAimes = JSON.parse(localStorage.getItem('filmsAimes')) || [];
+    
+        // Vérifiez si le film est déjà marqué comme aimé
+        const index = filmsAimes.indexOf(filmId);
+        if (index === -1) {
+            // Si le film n'est pas aimé, ajoutez-le à la liste
+            filmsAimes.push(filmId);
+        } else {
+            // Si le film est déjà aimé, retirez-le de la liste
+            filmsAimes.splice(index, 1);
+        }
+    
+        // Enregistrez la liste mise à jour dans le localStorage
+        localStorage.setItem('filmsAimes', JSON.stringify(filmsAimes));
+
     }
     
+    const boutonFilmsAimes = document.getElementById('bouton-films-aimes');
+
+    boutonFilmsAimes.addEventListener('click', () => afficherFilmsAimes());
+
+    function afficherFilmsAimes() {
+        // Récupérez la liste des films aimés depuis le localStorage
+        const filmsAimes = JSON.parse(localStorage.getItem('filmsAimes')) || [];
+    
+        // Filtrez la liste principale des films pour n'afficher que les films aimés
+        const filmsAimesFiltres = listFilms.filter(film => filmsAimes.includes(film._id));
+    
+        // Appelez la fonction pour afficher les films aimés
+        afficherFilms(filmsAimesFiltres);
+    }
 }
 
 

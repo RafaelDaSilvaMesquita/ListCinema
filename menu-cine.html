@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liste Cine</title>
     <link rel="stylesheet" href="styles.css">
+    
 </head>
 
 <body>
@@ -19,7 +20,7 @@
                 <li class="flex-item-bouton" id="triTitres"><a class="bouton-tri" href="#triertitre">Trier par titre</a></li>
                 <li class="flex-item-bouton" id="triBoutonCroissant"><a class="bouton-tri" href="#triertitre">Trier par ordre croissant</a></li>
                 <li class="flex-item-bouton" id="triBoutonDecroissant"><a class="bouton-tri" href="#triertitre">Trier par ordre décroissant</a></li>
-                <label for="genre" class="label-front">Filtrer par genre :</label>
+                <label for="genre" class="label-front">Filtrer par genre</label>
                 <select id="genre">
                     <option value="Tous">Tous les genres</option>
                     <option value="Aventure">Aventure</option>
@@ -31,7 +32,8 @@
                     <option value="Mystère">Mystère</option>
                     <!-- Ajoutez d'autres genres ici selon votre fichier JSON -->
                 </select>
-                <li class="flex-item-bouton"><a class="bouton-tri" href="#trierpays">Trier par pays</a></li>          
+                <li class="flex-item-bouton"><a class="bouton-tri" href="#trierpays">Trier par pays</a></li>
+                <li id="bouton-films-aimes" class="flex-item-bouton"><a class="bouton-tri" href="#films-aimes">Films Likés</a></li>        
             </ul>
         </nav>
         <section class="main-content">
